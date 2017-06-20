@@ -1,0 +1,292 @@
+[
+  {
+    "_id": "ec3ca850-55d6-11e7-9a5b-69bc573465a7",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.10: SecurityGroup Changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "recipientAccountId",
+        "userIdentity.accountName",
+        "requestParameters.ipPermissions.items",
+        "requestParameters.groupId",
+        "userAgent"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(AuthorizeSecurityGroup* OR DeleteSecurityGroup OR RevokeSecurityGroup*)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "d8446f70-55d8-11e7-9a5b-69bc573465a7",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.11: NACL Changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(CreateNetworkAcl* OR DeleteNetworkAcl* OR ReplaceNetworkAcl*)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "9adb46b0-55db-11e7-9949-b9b5c362f7a7",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.12: Network Gateway Changess",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "eventName",
+        "recipientAccountId"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(AttachInternetGateway OR CreateCustomerGateway OR CreateEgressOnlyInternetGateway OR CreateInternetGateway OR CreateNatGateway OR DeleteEgressOnlyInternetGateway OR DeleteNatGateway OR DetachInternetGateway)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "fb0176c0-55dd-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.13: Route Table Changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(AssociateRouteTable OR CreateRoute* or DeleteRoute* OR DisassociateRouteTable OR ReplaceRoute*)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "951484a0-55de-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.14: VPC Changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(AcceptVpcPeeringConnection OR AssociateVpcCidrBlock OR AttachClassicLinkVpc OR CreateVpc* or DeleteVpc* OR DetachClassicLinkVpc OR DisableVpcClassicLink* OR EnableVpcClassicLink* OR ModifyVpc* OR MoveAddressToVpc OR RejectVpcPeeringConnection)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "4f2f3dd0-55e4-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.1: unauthorized API calls",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"errorCode:UnauthorizedOperation OR errorCode:AccessDenied*\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "812b9260-55fe-11e7-bbb0-352334dc0ae4",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.2: Management Console sign-in without MFA",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "recipientAccountId",
+        "userIdentity.accountName",
+        "additionalEventData.MFAUsed"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"eventName:ConsoleLogin AND additionalEventData.MFAUsed:No\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "3a2e6e90-55e6-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.3: Root Account Usage.",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "userIdentity.invokedBy",
+        "eventType"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"userIdentity.type:Root AND NOT (_exists_:userIdentity.invokedBy) AND NOT eventType:AwsServiceEvent\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "c302fa70-55ea-11e7-8a86-cbd93de5bd01",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.4: IAM policy changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName(DeleteGroupPolicy OR DeleteRolePolicy OR Delete UserPolicy OR PutGroupPolicy OR PutRolePolicy OR PutUserPolicy OR CreatePolicy OR DeletePolicy OR CreatePolicyVersion OR DeletePolicyVersion OR AttachRolePolicy OR DetachRolePolicy OR AttachUserPolicy OR DetachUserPolicy OR AttachGroupPolicy OR DetachGroupPolicy)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "425dd290-55eb-11e7-8a86-cbd93de5bd01",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.5: CloudTrail configuration changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:(CreateTrail OR UpdateTrail OR  DeleteTrail OR  StartLogging OR StopLogging)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "77f6fbc0-55eb-11e7-8a86-cbd93de5bd01",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.6: AWS Management Console authentication failures",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventName:ConsoleLogin AND errorMessage:\\\"Failed authentication\\\"\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "b04533d0-55e0-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.7: CMK disabled or scheduled for deletion",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventSource:kms.amazonaws.com AND eventName:(deleteKey OR ScheduleKeyDeletion)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "b58c0590-55df-11e7-bfe0-bd553ea6a5d1",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.8: S3 Bucket Policy",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventSource:s3.amazonaws.com AND eventName:(PutBucketAcl OR PutBucketPolicy OR PutBucketCors OR  PutBucketLifecycle OR PutBucketReplication OR DeleteBucketPolicy OR  DeleteBucketCors OR DeleteBucketLifecycle OR DeleteBucketReplication)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "3201fc50-55d7-11e7-9a5b-69bc573465a7",
+    "_type": "search",
+    "_source": {
+      "title": "AWS CIS 3.9: Config Changes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "recipientAccountId",
+        "eventName",
+        "awsRegion"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"eventSource:config.amazonaws.com AND eventName:(StopConfigurationRecorder OR DeleteDeliveryChannel OR PutDeliveryChannel OR PutConfigurationRecorder)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  }
+]
